@@ -1,39 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hot Girls</title>
+<style>
+/* Стили для кружка загрузки */
+.loader {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  margin: 50px auto;
+}
 
-<head>  
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Redirect to URL</title>
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
 
-  <!-- Ruangan Image -->
-  <link rel="icon" type="image/png" href="https://i.ibb.co.com/WgxfTtC/F7-Jv-Dz-LXEAAZe2k.jpg">
-  <link rel="image_src" href="https://i.ibb.co.com/WgxfTtC/F7-Jv-Dz-LXEAAZe2k.jpg" />
-  <meta property="og:image" content="https://i.ibb.co.com/WgxfTtC/F7-Jv-Dz-LXEAAZe2k.jpg" />
-  <meta property="og:image" name="twitter:image:src" itemprop="image" content="" />
-  <meta property="og:image:width" content="300">
-  <meta property="og:image:height" content="300">
-  <meta property="og:url" content="#">
-  <meta name="twitter:card" content="sumary_large_image">
-  <meta property="og:image:alt" name="twitter:image:alt" content="LOGO">
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+<script>
+window.onload = function() {
+    // Список редиректов
+    var redirects = [
+        "https://lin.afdgo.pro/click?pid=7831&offer_id=25&ref_id=SIRENG&sub1=SIRENG&sub2=SIRENG",
+        
+    ];
 
-  <!-- Ruangan Deskripsi -->
-  <meta content="Click Here" name="description">
-  <meta property="og:description" content="Click Here"/>
-  <meta property="og:title" content="Click Here"/>
-  <meta name="twitter:description" content="Click Here">
-
-  <meta content="" name="keywords">
-  <meta name="facebook-domain-verification" content="jdx4zsjhnulnm02hso3515emgv24r5" />
-
-  
-
-  <!-- Ruangan Redirect -->
-  <meta http-equiv="refresh" content="2; URL=https://lin.afdgo.pro/click?pid=7831&offer_id=25&ref_id=SIRENG&sub1=SIRENG&sub2=SIRENG">
-  <link rel="canonical" href="https://lin.afdgo.pro/click?pid=7831&offer_id=25&ref_id=SIRENG&sub1=SIRENG&sub2=SIRENG">
-  
-
+    // Получение случайного индекса
+    var randomIndex = Math.floor(Math.random() * redirects.length);
+    
+    // Получение случайного URL
+    var randomRedirect = redirects[randomIndex];
+    
+    // Отображение кружка загрузки
+    document.getElementById('loader').style.display = 'block';
+    
+    // Выполнение редиректа
+    window.location.href = randomRedirect;
+};
+</script>
 </head>
 <body>
+<!-- Кружок загрузки -->
+<div class="loader" id="loader" style="display: none;"></div>
 </body>
 </html>
